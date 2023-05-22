@@ -1,0 +1,726 @@
+/* TIPS VOOR MIJ ZELF */
+/* tranistion kan je toevoegen als het ritme van hoe iets wordt gezegd op een bepaalde manier bv gaat */
+/* anderes zou ik het weglaten */
+
+/* als die speaker praat, digital letters gebruiken en als de personage praat, een font die bij hem past */
+/* denk ook aan de dikte van het font, font die ik kies moet passen bij zn karakter*/
+
+
+/* LET OP VAN DE DOCENT */
+/* Woord voor woord is niet persee nodig, nog weghalen bij p0, zo wel uit kunnen leggen waarom? */
+/* de boem op het begin zet meteen de toon, laat dat zien */
+/* gerammel/geruis om de achtergrond kan je ook weergeven scan bij geluid 2 vgm kan ik nog iets mee doen!!
+fuck-off skinjobm miss meer mee doen? gebruik, verluisterd het maar wel aggresief, doe daar iets mee!!! aggresief verluisteren */
+/* bij de irritante piep miss nog met het licht spelen?  */
+/* GEEF WEER WAT JE NIET KUNT HOREN niet wat je ziet
+/* whitin cells in interlinked, laat dat zinnetje 3 keer op poppen */ 
+/* het geluid na de piep als het opeens stopt is een soort boem ,geef dat duidelijk weer */
+
+/* 2e fragment kan je proberen, geef de sfeer vorm, laat zien dat je het verschil kan zien */
+
+
+/* **********************************************
+Basic layout.
+	Place the video in the center of the page.
+*********************************************  */
+
+
+
+
+
+body {
+	display: grid;
+	height: 100vh;
+	margin: 0;
+	justify-content: center;
+	background-color: rgb(43, 42, 42);
+}
+
+#video-container {
+	margin: auto;
+}
+#video-mask {
+	aspect-ratio: 240.5/100;
+	display: grid;
+	overflow: hidden;
+	align-content: center;
+	transition: 1s;
+}
+
+iframe {
+	width: 80vw;
+	height: 53.33333333vw;
+	margin-top: -0.35vw;
+}
+
+
+
+/* **********************************************
+Basic mechanics
+Hide all paragraphs by default
+Show them when they receive the class 'on'
+Hide them when they receive the class 'off'
+Feel free to adjust the defaults to your needs.
+********************************************** */
+#closed-captions p {
+	opacity: 0;
+	transition: .05s;
+	position: absolute;
+}
+#closed-captions .on {
+	opacity: 1;
+}
+#closed-captions .off {
+	transition: .2s;
+	opacity: 0;
+}
+.voice1 {
+	font-weight: bold;
+	color: rgb(255, 255, 255);
+	font-family: "Brenner Mono";
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 1em;
+}
+.voice2 {
+	font-style: italic;
+	color: rgb(233, 233, 233);
+	font-weight: 700;
+	font-size: 1.5em;
+	font-family: "brenner sans";
+}
+
+.voice3{
+	font-family: "Brenner Sans Condensed";
+	font-style: normal;
+	font-weight: 100;
+	font-size: 1em;
+	color: rgb(194, 194, 194);
+	animation-name: fuckoff;
+	animation-duration: 1;
+	animation-iteration-count: 1;
+	animation-duration: .5s;
+}
+
+@keyframes fuckoff{
+	0%{ margin-left: 0em;}
+	100% {margin-left: 5em;}
+}
+
+.voice4 {
+	font-family: "Brenner Sans Condensed";
+	font-style: Normal;
+	color: rgb(255, 255, 255);
+	font-size: 1.5em;
+	margin-right: 5em;
+	width: 80%;
+	text-align: end;
+}
+
+
+.voice5 {
+	color: rgb(255, 255, 255);
+	font-size: 1em;
+	font-family: "Brenner Mono";
+	font-style: Normal;
+	font-weight: 400;
+}
+
+.voice6{
+	font-family: "brenner sans";
+	font-style: italic;
+	font-weight: 400;
+	font-size: 1em;
+	color:rgb(219, 218, 218);
+}
+
+/* **********************************************
+The first paragraph, with extended timing for 
+	all siblings. Basically what it does is that
+	it shows the text after a delay, which 
+	corresponds with the time that the word is
+	spoken.
+You probably want to change the styling.
+********************************************** */
+
+
+
+
+
+/* EERSTE ZIN */
+.p0 span {
+	opacity: 0;
+}
+.p0.on span:first-of-type {
+	opacity: 1;
+	transition: 0s;
+}
+.p0.on span:nth-of-type(2) {
+	opacity: 1;
+	transition: 0s .4s;
+	margin-right: -.25em;
+}
+.p0.on span:nth-of-type(3) {
+	opacity: 1;
+	transition: 0s .5s;
+	margin-right: -.25em;
+}
+.p0.on span:nth-of-type(4) {
+	opacity: 1;
+	transition: 0s .7s;
+	margin-right: -.25em;
+}
+.p0.on span:nth-of-type(5) {
+	opacity: 1;
+	transition: 0s 1.1s;
+	margin-right: -.25em;
+}
+.p0.on span:nth-of-type(6) {
+	opacity: 1;
+	transition: 0s 1.4s;
+	margin-right: -.25em;
+}
+
+.p0.on span:nth-of-type(7) {
+	opacity: 1;
+	transition: 0s 1.7s;
+	margin-right: -.25em;
+}
+
+.p0.on span:nth-of-type(8) {
+	opacity: 1;
+	transition: 0s 2s;
+}
+.p0.on span:nth-of-type(9) {
+	opacity: 1;
+	transition: 0s 3s;
+}
+
+.p0.on span:nth-of-type(10) {
+	opacity: 1;
+	transition: 0s 3.2s;
+}
+.p0.on span:nth-of-type(11) {
+	opacity: 1;
+	transition: 0s 3.7s;
+} 
+
+
+
+/* within cells interlinked */
+.p41{
+	font-size:1em;
+}
+.p42{
+	font-size:1.2em;
+}
+.p43{
+	font-size:1.4em;
+}
+
+
+
+
+
+/* 2E SCENCE!! */
+.p52{
+	font-size: 1.1em;
+}
+
+.p54, .p55{
+	font-size: 1.1em;
+}
+
+.p55{
+	font-size: 1.2em;
+}
+
+.p61{
+	font-size: 1.3em;
+}
+.p63{
+	font-size: 1.4em;
+}
+
+.p65{
+	font-size: 1.6em;
+	color: rgb(250, 249, 249);
+}
+.p67{
+	font-size: 1.8em;
+	color: rgb(252, 229, 229);
+}
+.p69{
+	font-size: 2em;
+	color: rgb(243, 209, 209);
+}
+.p71{
+	font-size: 2.4em;
+	color: rgb(241, 184, 184);
+}
+.p73{
+	font-size: 2.4em;
+	color: rgb(240, 157, 157);
+}
+
+.p75{
+	font-size: 2.6em;
+	color: rgb(240, 134, 134);
+}
+.p77{
+	font-size: 2.8em;
+	color: rgb(240, 130, 130);
+}
+
+.p79{
+	font-size: 3em;
+	margin-left: 1.1em;
+	color: rgb(248, 115, 115);
+}
+
+/* **********************************************
+Sounds.
+	You can style the whole body, or you can 
+	style anything within the body the moment
+	a sound starts.
+*********************************************  */
+
+/* sound0 */
+.sound0{
+	animation: firstsound 10s;
+	animation-iteration-count: 1;
+}
+
+@keyframes firstsound{
+	0%{
+		background-color: rgb(0, 0, 0); 
+		transform: scale(.5)
+	}
+	12%{
+		background-color: rgb(99, 90, 90); 
+	}
+	14%{
+		background-color: rgb(99, 90, 90); 
+	}
+	16%{
+		background-color: rgb(43, 42, 42); 
+	}
+	18%{
+		background-color: rgb(99, 90, 90); 
+	}
+	20%{
+		background-color: rgb(43, 42, 42); 
+	}
+	24%{
+		background-color: rgb(43, 42, 42); 
+	} 
+	35%{
+		background-color: rgb(43, 42, 42); 
+	}
+	38%{
+		background-color: rgb(95, 94, 94); 
+	}
+	60%{
+		background-color: rgb(85, 84, 84); 
+	}
+	63%{
+		background-color: rgb(43, 42, 42); 
+	}
+	68%{
+		background-color: rgb(85, 84, 84); 
+	}
+	52%{
+		background-color: rgb(43, 42, 42); 
+	}
+	100%{
+		background-color: rgb(43, 42, 42); 
+		transform: scale(1)
+	}
+}
+
+
+
+
+/* sound1 */
+.sound1 #video-mask {
+	animation: sound1alarm 1s;
+	animation-iteration-count: 1;
+}
+
+@keyframes sound1alarm {
+	0% {
+		box-shadow: none;
+		transform: scale(1);
+	}
+	50% {
+		box-shadow: 2em 2em 3em red, -2em -2em 3em red;
+		transform: scale(1.1);
+	}
+	100% {
+		box-shadow: none;
+		transform: scale(1);
+	}
+}
+
+
+
+
+/* sound2 */
+.sound2 #video-mask {
+	animation: sound2alarm 1.5s, gerammel 1s 3.8s;
+	animation-iteration-count: 1;
+}
+
+@keyframes sound2alarm {
+	0% {
+		box-shadow: 2em 2em 2em rgb(134, 189, 241);
+	}
+	50% {
+		box-shadow: 10em 30em 50em rgb(29, 116, 216);
+	}
+	100% {
+		box-shadow: 2em 2em 2em rgb(134, 189, 241);
+	}
+}
+
+@keyframes gerammel {
+	0% {
+		transform: rotate(0);
+	}
+	15% {
+		transform: rotate(2deg);
+	}
+	30% {
+		transform: rotate(-2deg);
+	}
+	45% {
+		transform: rotate(2deg);
+	}
+	60% {
+		transform: rotate(-2deg);
+	}
+	75% {
+		transform: rotate(2deg);
+	}
+	90% {
+		transform: rotate(-2deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+ 
+
+
+
+
+
+
+
+
+/* sound4 */
+.sound4 #video-mask{
+		animation: sound4piep 1s;
+		animation-iteration-count: 1;
+	}
+	
+	@keyframes sound4piep{
+		0% {
+			box-shadow: none;
+			transform: scale(1);
+		}
+		50% { 
+			box-shadow: 2em 1em 1em rgb(172, 1, 1);
+			transform: scale(1.1);
+		}
+		100% {
+			background-color: none;
+			transform: scale(1);
+		}
+	}
+
+
+
+
+/* sound5 */
+.sound5{
+	animation-name: sound5stem, gerommel;
+	animation-duration: .2s, 1s;
+	animation-timing-function: ease-in-out;
+	animation-delay: 0s, 1s;
+	animation-iteration-count: 1;
+}
+
+@keyframes sound5stem{
+    0% {
+		transform: translateX(0);
+	}
+	50%{
+		transform: translateX(5em);
+	}
+	100% { 
+		transform: translateX(0);
+	}
+}
+
+@keyframes gerommel{
+	0% {
+		transform: rotate(0);
+	}
+	35% {
+		transform: rotate(2deg);
+	}
+	50% {
+		transform: rotate(-2deg);
+	}
+	75% {
+		transform: rotate(2deg);
+	}
+	100% {
+		transform: rotate(0);
+	}
+}
+ 
+
+
+
+
+/* sound6 */
+.sound6 #video-mask {
+	animation: sound6piep 1s;
+	animation-iteration-count: 1;
+}
+
+@keyframes sound6piep{
+    0% {
+		box-shadow: none;
+		transform: scale(1);
+	}
+	50% { 
+		box-shadow: 2em 1em 1em  rgb(172, 1, 1);
+		transform: scale(1.1);
+	}
+	100% {
+		background-color: none;
+		transform: scale(1);
+	}
+}
+
+
+
+/* sound8 */
+.sound8 #video-mask {
+	animation-name: oplopendePiep0, schermgroei0;
+	animation-duration: 2s, 10s;
+	animation-iteration-count: 5, 1;
+}
+
+@keyframes oplopendePiep0{
+	0%{
+		transform: translateX(.3em);
+	}
+	25%{transform: translateX(-.3em);}
+	50%{transform: translateX(.3em);}
+	75%{transform: translateX(-.3em);}
+	100%{
+		transform: translateX(.3em);
+	}
+}
+
+
+@keyframes schermgroei0{
+	0%{
+		scale: 1;
+		box-shadow: none;
+	}
+	5%{box-shadow: 2em 1em 1em  rgb(172, 1, 1);}
+	10%{box-shadow: none;}
+	100% {scale: 1.2;}
+}
+
+
+
+
+
+
+.sound9 #video-mask{
+	animation-name: oplopendePiep1, schermgroei1;
+	animation-duration: 1s, 10s;
+	animation-iteration-count: 10, 1;
+}
+
+@keyframes oplopendePiep1{
+	0%{transform: translateX(-.5em);}
+	25%{transform: translateX(.5em);}
+	50%{transform: translateX(-.5em);}
+	75%{transform: translateX(.5em);}
+	100%{transform: translateX(-.5em);}
+}
+
+@keyframes schermgroei1{
+	0%{scale: 1.2;}
+	100%{scale: 1.4;}
+}
+
+
+
+
+
+.sound10 #video-mask{
+	animation-name: oplopendePiep2, schermgroei2;
+	animation-duration: .5s, 10s;
+	animation-iteration-count: 20, 1;
+}
+
+@keyframes oplopendePiep2{
+	0%{transform: translateX(-.7em);}
+	25%{transform: translateX(.7em);}
+	50%{transform: translateX(-.7em);}
+	75%{transform: translateX(.7em);}
+	100%{transform: translateX(-.7em);}
+}
+
+@keyframes schermgroei2{
+	0%{scale: 1.4;}
+	100%{scale: 1.8;}
+}
+
+
+
+
+
+.sound11 #video-mask{
+	animation-name: oplopendePiep3, schermgroei3;
+	animation-duration: .25s, 10s;
+	animation-iteration-count: 20, 1;
+}
+
+@keyframes oplopendePiep3{
+	0%{transform: translateX(-1em);}
+	25%{transform: translateX(1em);}
+	50%{transform: translateX(-1em);}
+	75%{transform: translateX(1em);}
+	100%{transform: translateX(-1em);}
+}
+
+@keyframes schermgroei3{
+	0%{scale: 1.8;}
+	100%{scale: 2;}
+}
+
+
+
+
+
+
+.sound12 #video-mask{
+	animation-name: oplopendePiep4, schermgroei4;
+	animation-duration: .20s, 9s;
+	animation-iteration-count: 45, 1;
+}
+
+@keyframes oplopendePiep4{
+	0%{transform: translateX(-1.2em);}
+	20%{transform: translateX(1.2em);}
+	40%{transform: translateX(-1.2em);}
+	60%{transform: translateX(1.2em);}
+	80%{transform: translateX(-1.2em);}
+	100%{transform: translateX(1.2em);}
+}
+
+
+@keyframes schermgroei4{
+	0%{scale: 2;}
+	99%{scale: 2.02;}
+	100%{scale: 1;}
+}
+
+.sound13{
+	animation: none;
+}
+
+.sound14 #video-mask{
+	animation-name: muziek;
+	animation-duration: 45s;
+	animation-iteration-count: 1;
+}
+
+@keyframes muziek{
+	0%{
+		transform: scale(1);
+	}
+	10%{
+		transform: scale(.8);
+	}
+	20%{
+		transform: scale(1.2);
+	}
+	25%{
+		transform: scale(.9);
+	}
+	35%{
+		transform: scale(1.1);
+	}
+	40%{
+		transform: scale(1);
+	}
+	55%{
+		transform: scale(1.2);
+	}
+	65%{
+		transform: scale(1);
+	}
+	70%{
+		transform: scale(1.1);
+	}
+	75%{
+		transform: scale(1.3);
+	}
+	85%{
+		transform: scale(1.2);
+	}
+	100%{
+		transform: scale(1.4);
+	}
+}
+
+
+.sound14{
+	animation-name: achtergrondkleur;
+	animation-duration: 45s;
+	animation-timing-function: 1;
+}
+
+.sound14 {
+	background: radial-gradient(circle, #080808, #cacacc);
+	animation: gradientAnimation 4s infinite;
+	background-size: 100% 100%;
+  }
+  
+  @keyframes gradientAnimation {
+	0% {
+	  background-size: 100% 100%;
+	}
+	40% {
+	  background-size: 150% 150%;
+	}
+	80% {
+		background-size: 100% 100%;
+	}
+	85% {
+		background-size: 200% 200%;
+	}
+	80% {
+		background-size: 150% 150%;
+	}
+	95% {
+		background-size: 200% 200%;
+	}
+	100% {
+		background-size: 100% 100%;
+	}
+  }
+  
+.sound15{
+	animation:none;
+}
